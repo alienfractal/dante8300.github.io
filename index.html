@@ -5,6 +5,18 @@
 	<!-- STYLES -->
     <link href="css/style.css" rel="stylesheet" />
     <script src="https://api.beta.glia.com/salemove_integration.js"></script>
+    <script>
+	var setAttributes = function(visitorData){
+        sm.getApi({version: 'v1'}).then(function(salemove) {
+        salemove.updateInformation({ "customAttributes":{"Country":visitorData['country'], "country_name":visitorData['country_name'], "Quote Recall":"Yes", "currency":visitorData['currency'],"languages":visitorData['languages']}}).then(function() {
+            console.log("success");
+        }).catch(function(error) {
+            console.log("error");
+           });
+          });
+        };
+	</script>
+
   </head>
   <body>
   	Hello World!
