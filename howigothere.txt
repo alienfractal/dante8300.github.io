@@ -9,3 +9,11 @@ Required to be installed.
 Node
 npm
 
+Default Yeoman generator is rather complex this one looks more promising. 
+https://www.npmjs.com/package/generator-quick
+
+steps 
+npm init
+npm install -g generator-quick
+yo quick
+npm start
