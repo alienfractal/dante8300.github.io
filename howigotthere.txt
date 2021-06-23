@@ -1,0 +1,11 @@
+
+https://gulpjs.com/docs/en/getting-started/quick-start
+https://github.com/yeoman/generator-webapp
+
+https://stackoverflow.com/questions/67252829/yo-microsoft-sharepoint-fails-on-typeerror-lookups-flatmap-is-not-a-function
+
+Required to be installed.
+
+Node
+npm
+
