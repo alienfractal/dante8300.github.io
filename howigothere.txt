@@ -17,3 +17,13 @@ npm init
 npm install -g generator-quick
 yo quick
 npm start
+
+------
+Gather an nice and responsive html5 example from code pen
+https://codepen.io/mithicher/pen/ojdXBa
+
+
+
+Planing to use OOP to create objects to dinamically load the content on my page.
+For example The Card should be a basic type of object.
+https://www.tutorialsteacher.com/javascript/prototype-in-javascript

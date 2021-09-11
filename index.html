@@ -1,16 +1,72 @@
-<html>
-  <head>
-    <title>HTML5 Playground</title>
+<!doctype html>
+<html class="no-js" lang="">
 
-	<!-- STYLES -->
-    <link href="css/style.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-  </head>
-  <body>
-  	Hello World!
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/card.js"></script>
+    <script src="https://cdn.rawgit.com/atesgoral/dweet-runtime/1.0.0/lib/index.js"></script>
+</head>
 
-	<!-- SCRIPTS -->
-	<script src="js/script.js" type="text/javascript"></script>
-  </body>
+<body onload="populateGrid()">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id='stars'>
+        <h2>ALIEN    RETRO</h2>
+        <canvas id="c"></canvas>    
+        
+        
+    </div>
+    
+   
+    <div class="site__wrapper">
+   
+        <div id ='grid1' class="grid">
+     
+        </div>	
+        
+        <div id ='grid2' class="grid">
+     
+        </div>
+        
+        <div id ='grid3' class="grid">
+     
+        </div>
+  
+        <div class="site__info">
+         
+          <p>Handcrafted by <a target="_blank" href="https://lienthealien.itch.io/">LienTheAlien</a>. Tweet me on <a target="_blank" href="https://twitter.com/LienTheAlien">Twitter</a></p>
+        </div>
+  </div>
+
+  
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+                    function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+                e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+                e.src = 'https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto'); ga('send', 'pageview');
+    </script>
+</body>
+
 </html>

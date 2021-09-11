@@ -15,5 +15,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.tmp
+.gith
+.editorconfig
+.npmignore
+
 
 npm-debug.log*
