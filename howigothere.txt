@@ -27,3 +27,8 @@ https://codepen.io/mithicher/pen/ojdXBa
 Planing to use OOP to create objects to dinamically load the content on my page.
 For example The Card should be a basic type of object.
 https://www.tutorialsteacher.com/javascript/prototype-in-javascript
+
+
+Start animation takine from : https://www.dwitter.net/d/13705
+
+https://jameshfisher.com/2018/12/29/how-to-draw-sprites-on-an-html-canvas/

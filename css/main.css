@@ -61,7 +61,8 @@ h2 {
     font-family: "manaspc";
     color: #ffffff;
     top: 30%;
-    left: 35%;
+    left: 15%;
+    right: 15%;
     text-shadow:
     0 0 2px #fff,
     0 0 5px #fff,
@@ -213,10 +214,13 @@ a:hover {
 }
 
 .card__overlay--pixelgradient {
-    background-repeat: repeat-x;
-    background-blend-mode: overlay;
+
+   
+   
     background-image: url("../img/page/bayernmatrix.png");
+    background-size: cover;
     z-index: 2;
+     
 }
 
 .card__overlay-content {

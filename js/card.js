@@ -3,7 +3,7 @@
 
  function renderCardtoGrid(gridId){
 
-    var mockImg = 'https://thumb.gyazo.com/thumb/200_w/eyJhbGciOiJIUzI1NiJ9.eyJpbWciOiJfOWNjMDM4NDUwODUwYWU4MWMyNTNiMWRkMjQzNTcyNWMifQ.Sm4K6s0Y6PzL7VGBmDWdEb4SvElnMGMJQwHLCsdxoGg-png.jpg';
+    var mockImg = Math.random()>0.5?'/img/pixelart/synthrisecover.png':'/img/pixelart/Alla-A4.png';
 
     // generate the html for card
     var html = '<div class="card shadow-outside">';
