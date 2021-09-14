@@ -82,24 +82,33 @@ function u(t) {
     }
     var scalefactorX = 2;
     var scalefactorY = 4;
-   
-    if (f % (24 + (6 * S(t ^ f) | 0)) == 0) {
-        var imageObj_green = document.getElementById('hongo1');
-        var imageObj_red = document.getElementById('hongo2');
+    var imageObj_green = document.getElementById('hongo1');
+    var imageObj_red = document.getElementById('hongo2');
+    
+    if (f % (30) == 0) {
+        
         currentFrames += 1;
 
         loadSpriteContent(c, currentFrames, 0, (c.height - imageObj_green.height * scalefactorY+20), 2, 4, imageObj_green, 19);
         loadSpriteContent(c, currentFrames, c.width - imageObj_red.width * 0.6, (c.height - imageObj_red.height * scalefactorY+35), 2, 4, imageObj_red, 4);
+       
+
     } else {
-        var imageObj_green = document.getElementById('hongo1');
-        var imageObj_red = document.getElementById('hongo2');
+        
 
         loadSpriteContent(c, currentFrames, 0, (c.height - imageObj_green.height * scalefactorY+20), scalefactorX, scalefactorY, imageObj_green, 19);
         loadSpriteContent(c, currentFrames, c.width - imageObj_red.width * 0.6, (c.height - imageObj_red.height * scalefactorY+35), scalefactorX, scalefactorY, imageObj_red, 4);
+    
 
     }
+    var imageObj_bunny = document.getElementById('bunny');
+    loadSpriteContent(c, f>>2,3*f%W- imageObj_bunny.width , c.height - imageObj_bunny.height * scalefactorY , 4,4, imageObj_bunny, 3);
 
-    
+    var imageObj_jester = document.getElementById('jester');
+    loadSpriteContent(c, f>>2,((f%W))- imageObj_jester.width , c.height - imageObj_jester.height * scalefactorY , 4,4, imageObj_jester, 5);
+    var imageObj_wizard = document.getElementById('wizard');
+    loadSpriteContent(c, f>>2,((f%W))+ imageObj_wizard.width , c.height - imageObj_wizard.height * scalefactorY , 4,4, imageObj_wizard, 3);
+  
     for(x.font='32px l',i=0;i<59;i++){
         x.fillStyle=R(255*(i%2),255,255)
         x.fillText(String.fromCharCode(((f)*i)%8500),C(o=20*i+t)*i*13+950,S(o+=i/6)*i*19+450)
