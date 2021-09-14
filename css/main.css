@@ -34,6 +34,8 @@ html {
     font-size: 100%;
 }
 
+
+
 body {
     font-size: 0.9em;
     font-family: "FFFFORWA";
@@ -43,7 +45,7 @@ body {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
-    background-image: url("../img/page/64x64-tile-rocky.png");
+    background-image: url("../img/page/256x256-tile-rocky.png");
     background-color: #000000;
     background-repeat: repeat;
 }
@@ -72,6 +74,24 @@ h2 {
     z-index: 2;
 }
 
+h1 {
+    font-size: 4vw;
+    text-align: center;
+    font-family: "manaspc";
+    color: #80dbf7;
+    top: 30%;
+    left: 15%;
+    right: 15%;
+    text-shadow:
+    0 0 2px rgb(171, 141, 240),
+    0 0 5px rgb(111, 138, 255),
+    0 0 23px rgb(76, 225, 252),
+    0 0 83px #32cfee;
+    
+   
+    z-index: 2;
+}
+
 a {
     color: #29b6f6;
     text-decoration: none;
@@ -83,10 +103,13 @@ p {
 }
 
 #c { width: 100%;
-     height: 15vw;
+     height: 30vw;
      background-color: white;
      position: relative;
      z-index: 1;
+     border: 2vw solid transparent;
+     
+     border-image: url("../img/page/border.png") 30 round;
    }
 
    #stars
@@ -166,7 +189,7 @@ a:hover {
 }
 
 .card__title {
-    color: #8223b1;
+    color: #4ea4f5;
     display: inline-block;
     font-family: "FFFFORWA";
     font-size: 1.2em;
@@ -216,11 +239,16 @@ a:hover {
 .card__overlay--pixelgradient {
 
    
-   
+
     background-image: url("../img/page/bayernmatrix.png");
     background-size: cover;
     z-index: 2;
+    opacity: 1.0;
      
+}
+
+.card__overlay--pixelgradient:hover {
+    opacity: 0.1;
 }
 
 .card__overlay-content {

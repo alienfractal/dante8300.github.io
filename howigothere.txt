@@ -32,3 +32,11 @@ https://www.tutorialsteacher.com/javascript/prototype-in-javascript
 Start animation takine from : https://www.dwitter.net/d/13705
 
 https://jameshfisher.com/2018/12/29/how-to-draw-sprites-on-an-html-canvas/
+
+
+For the data base i realized that having a DB for now could an overkill so i am going with 
+a json file on the server and a simple Ajax call to populate the main gallery
+https://csvjson.com/csv2json
+https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file
+
+Decided to use a script that indexes the files in a folder and export this information to json
