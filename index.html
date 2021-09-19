@@ -16,6 +16,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/card.js"></script>
+    <script src="js/gengine.js"></script>
     <script src="https://cdn.rawgit.com/atesgoral/dweet-runtime/1.0.0/lib/index.js"></script>
 </head>
 
@@ -26,50 +27,70 @@
 
     <!-- Add your site or application content here -->
     <div id='stars'>
-        <h2>ALIEN    RETRO</h2>
-        <canvas id="c"></canvas>    
-        <img id="hongo1" src="/img/page/forest-mushroom-2-spritesheet-ega.png" hidden></img>
+        <!-- <h2>ALIEN    RETRO</h2> -->
+        <canvas id="c"></canvas>
+        <canvas id="cbackground"></canvas>
+        <canvas id="cbackground2"></canvas>
+    </div>
+    <div id="images_src"><img id="hongo1" src="/img/page/forest-mushroom-2-spritesheet-ega.png" hidden></img>
         <img id="hongo2" src="/img/page/forest-red-mushroom-sleep-sheet-ega.png" hidden></img>
         <img id="bunny" src="/img/page/runningbunny.png" hidden></img>
         <img id="jester" src="/img/page/walkingjester.png" hidden></img>
         <img id="wizard" src="/img/page/Wizard-walk.png" hidden></img>
+        <img id="boogie" src="/img/page/boogieman-pachess-ega-25f-51h-44w.png" hidden></img>
+        <img id="skeleton" src="/img/page/zombie-walk-sheet.png" hidden></img>
+        <img id="jan" src="/img/page/jan-walker-sprite.png" hidden></img>
+
+        <img id="title" src="/img/page/animated-pagetitle-sheet-312x43-5.png" hidden></img>
+        <img id="king" src="/img/page/kingdance.png" hidden></img>
+        <img id="queen" src="/img/page/queendance.png" hidden></img>
+        <img id="bishop" src="/img/page/bishopDance.png" hidden></img>
+        <img id="priest" src="/img/page/priestdance.png" hidden></img>
+        <img id="skull" src="/img/page/skull-flying-sheet-48x48-8.png" hidden></img>
+        <img id="ufo" src="/img/page/alien-spaceship2.png" hidden></img>
+        <img id="alien" src="/img/page/LQ-alien-walk-28x58-6.png" hidden></img>
+        <img id="jhon" src="/img/page/alien-jhon.png" hidden></img>
+        <img id="hongo3" src="/img/page/forest-mushroom-talk-purple.png" hidden></img>
+        <img id="robot" src="/img/page/RoboTrasherIntroScreen-sheet.png" hidden></img>
         
-        
-        
+       
     </div>
-    
-    <div><h1>Pixel Art </h1></div>
+
+    <div>
+        <h1>Pixel Art </h1>
+    </div>
     <div class="site__wrapper">
 
-        <div id ='grid1' class="grid">
-     
-        </div>	
-        
-        <div id ='grid2' class="grid">
-     
-        </div>
-        
-        <div id ='grid3' class="grid">
-     
-        </div>
-  
-        <div class="site__info">
-         
-          <p>Handcrafted by <a target="_blank" href="https://lienthealien.itch.io/">LienTheAlien</a>. Tweet me on <a target="_blank" href="https://twitter.com/LienTheAlien">Twitter</a></p>
-        </div>
-  </div>
+        <div id='grid1' class="grid">
 
-  
+        </div>
+
+        <div id='grid2' class="grid">
+
+        </div>
+
+        <div id='grid3' class="grid">
+
+        </div>
+
+        <div class="site__info">
+
+            <p>Handcrafted by <a target="_blank" href="https://lienthealien.itch.io/">LienTheAlien</a>. Tweet me on <a
+                    target="_blank" href="https://twitter.com/LienTheAlien">Twitter</a></p>
+        </div>
+    </div>
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-            (function (b, o, i, l, e, r) {
-                b.GoogleAnalyticsObject = l; b[l] || (b[l] =
-                    function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
-                e = o.createElement(i); r = o.getElementsByTagName(i)[0];
-                e.src = 'https://www.google-analytics.com/analytics.js';
-                r.parentNode.insertBefore(e, r)
-            }(window, document, 'script', 'ga'));
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+                function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+            e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
         ga('create', 'UA-XXXXX-X', 'auto'); ga('send', 'pageview');
     </script>
 </body>

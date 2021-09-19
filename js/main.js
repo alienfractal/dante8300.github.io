@@ -1,7 +1,42 @@
 
 
 var currentFrames = 0;
-var galleryList ='';
+var galleryList = '';
+
+
+var imageObj_green = '';
+var imageObj_red = '';
+var imageObj_bunny = '';
+var imageObj_jester = '';
+var imageObj_wizard = '';
+var previousX = 0;
+
+var actorBunny = '';
+var actorMushroomGreen;
+var actorMushroomRed;
+var actorMushroomPurple;
+var actorJester;
+var actorWizard;
+var assetsLoaded = false;
+var actorJann;
+var actorBoogie;
+var actorSkeleton;
+
+var actorTitle;
+var actorking;
+var actorqueen;
+var actorbishop;
+var actorpriest;
+var actorskull;
+var actorufo;
+var actoralien;
+var actoralienjhon;
+var actorRobot;
+
+
+
+var actors = [];
+
 
 function requestGalleryList() {
     var xmlhttp = new XMLHttpRequest(),
@@ -13,11 +48,11 @@ function requestGalleryList() {
             if (this.readyState == 4 && this.status == 200) {
                 var myArr = JSON.parse(this.responseText);
                 //myFunction(myArr);
-                
-               
+
+
                 console.log("Gallery loaded ")
                 populateGrid(myArr);
-                console.log(myArr);
+                assetsLoaded = true;
             }
         } catch (e) {
             console.log(e);
@@ -26,103 +61,80 @@ function requestGalleryList() {
     };
     xmlhttp.open(method, url, true);
     xmlhttp.send();
-
-
+      
+    actorBunny = new Actor(0, 0, new Sprite(4, 4, document.getElementById('bunny'), 3));
+    actorMushroomGreen = new Actor(0, 0, new Sprite(2,4, document.getElementById('hongo1'), 19));
+    actorMushroomRed = new Actor(0, 0, new Sprite(2, 4, document.getElementById('hongo2'), 4));
+    actorJester=  new Actor(0, 0, new Sprite(4, 4, document.getElementById('jester'), 5));
+    actorWizard= new Actor(0, 0, new Sprite(4, 4, document.getElementById('wizard'), 3));
+    actorBoogie = new Actor(0, 0, new Sprite(2,2, document.getElementById('boogie'), 25));
+    actorSkeleton = new Actor(0, 0, new Sprite(2,2, document.getElementById('skeleton'), 20));
+    actorJann = new Actor(0, 0, new Sprite(3,3, document.getElementById('jan'), 8));
+    actorTitle = new Actor(0, 0, new Sprite(2,2, document.getElementById('title'), 5));
+    //actorJaan = new Actor(0, 0, new Sprite(2,2, document.getElementById('jan'), 8));
+    actorking =  new Actor(0, 0, new Sprite(2,2, document.getElementById('king'), 3));
+    actorqueen =  new Actor(0, 0, new Sprite(4,4, document.getElementById('queen'), 3));
+    actorbishop = new Actor(0, 0, new Sprite(4,4, document.getElementById('bishop'), 3));
+    actorpriest = new Actor(0, 0, new Sprite(4,4, document.getElementById('priest'), 3));
+    actorskull= new Actor(0, 0, new Sprite(4,4, document.getElementById('skull'), 8));
+    actorufo= new Actor(0, 0, new Sprite(2,4, document.getElementById('ufo'), 1));
+    actoralien= new Actor(0, 0, new Sprite(4,4, document.getElementById('alien'), 6));
+    actoralienjhon= new Actor(0, 0, new Sprite(2,3, document.getElementById('jhon'), 32));
+    actorMushroomPurple = new Actor(0, 0, new Sprite(3,4, document.getElementById('hongo3'),10));
+    actorRobot  = new Actor(0, 0, new Sprite(3,4, document.getElementById('robot'),25));
+    
 }
 
-//context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
-/*Parameter	Description	Play it
-img	Specifies the image, canvas, or video element to use	 
-sx	Optional. The x coordinate where to start clipping	
-sy	Optional. The y coordinate where to start clipping	
-swidth	Optional. The width of the clipped image	
-sheight	Optional. The height of the clipped image	
-xc	The x coordinate where to place the image on the canvas	
-yc	The y coordinate where to place the image on the canvas	
-width	Optional. The width of the image to use (stretch or reduce the image)	
-height	Optional. The height of the image to use (stretch or reduce the image)*/
 
-
-function loadSpriteContent(canvas, frame, xl, yl, scaleX, scaleY, imageObj, imgCount) {
-    var scaleX_ = scaleX;
-    var scaleY_ = scaleY;
-
-    var imgCount_ = imgCount;
-    //var sprSheetW=836*2;
-    var sprSheetW = imageObj.width;
-    var spriteW = sprSheetW / imgCount;
-    var spriteH = imageObj.height;
-
-    var sx = spriteW * ((frame) % imgCount);
-    var sy = 0;
-    var swidth = spriteW;
-    var sheight = spriteH;
-    var xc = xl;
-    var yc = yl;
-    var imgWidth = spriteW;
-    var imgHeight = spriteH;
-    var ctx = canvas.getContext('2d');
-    //x.drawImage(i,f%6*W/6,0,W/6,64,0,0,W/6,64);
-
-    ctx.drawImage(imageObj, sx, sy, swidth, sheight, xc, yc, ((imgWidth) * scaleX_), imgHeight * scaleY_);
-}
 
 function u(t) {
+
+    if(!assetsLoaded){return;}
     c.width |= 0
     f = frame
     W = c.width;
     H = c.height;
-    q = Math.abs(S(t) * 255 + W * H) % 255;
-    c.style.background = R();
+    //q = Math.abs(S(t) * 255 + W * H) % 255;
+    //c.style.background = R(0);
 
 
-    for (x.fillRect(0, 0, i = 2e3, i); i--; x.fillRect(960 + i * S(i) * Z, 540 + i * C(i * i) * Z, Z, Z)) {
+    /*for (x.fillRect(0, 0, i = 2e3, i); i--; x.fillRect(960 + i * S(i) * Z, 540 + i * C(i * i) * Z, Z, Z)) {
         x.fillStyle = R(i, i * C(i), Z = 2 ** T(i / 9 + t / 3), i + .03)
 
-    }
-    var scalefactorX = 2;
-    var scalefactorY = 4;
-    var imageObj_green = document.getElementById('hongo1');
-    var imageObj_red = document.getElementById('hongo2');
+    }*/
+    var newLocal = C(t / 4);
+    var nextX = W / 2 + newLocal * W;
+    moveActor(c,actorRobot,W-W/3.5,H - actorRobot.sprite_.img.height*actorRobot.sprite_.scaleY-15 ,f >> 4);
+    moveActor(c,actorMushroomPurple,W/8,H - actorMushroomPurple.sprite_.img.height*actorMushroomPurple.sprite_.scaleY ,f >> 4);
+    moveActor(c,actorMushroomGreen,actorMushroomGreen.x,H - actorMushroomGreen.sprite_.img.height*actorMushroomGreen.sprite_.scaleY ,(f >> (newLocal)+6)+1);
+    moveActor(c,actorMushroomRed,W-actorMushroomRed.sprite_.img.width*0.5 ,c.height - actorMushroomRed.sprite_.img.height * actorMushroomRed.sprite_.scaleY,(f >> (newLocal)+6)+1);
+    moveActor(c,actorBunny,nextX,H-actorBunny.sprite_.img.height* actorBunny.sprite_.scaleY,f >> 2);
+    moveActor(c,actoralienjhon,W-W/2.5,H - actoralienjhon.sprite_.img.height * actoralienjhon.sprite_.scaleY,f >>3);
+    moveActor(c,actorBoogie,W/2,c.height - actorBoogie.sprite_.img.height * actorBoogie.sprite_.scaleY,(f >> C(t/8)+3 )+1);
+    moveActor(c,actorWizard,W / 2 - C(t / 8) * W,H-actorWizard.sprite_.img.height* actorWizard.sprite_.scaleY,f >> 2);
     
-    if (f % (30) == 0) {
-        
-        currentFrames += 1;
-
-        loadSpriteContent(c, currentFrames, 0, (c.height - imageObj_green.height * scalefactorY+20), 2, 4, imageObj_green, 19);
-        loadSpriteContent(c, currentFrames, c.width - imageObj_red.width * 0.6, (c.height - imageObj_red.height * scalefactorY+35), 2, 4, imageObj_red, 4);
-       
-
-    } else {
-        
-
-        loadSpriteContent(c, currentFrames, 0, (c.height - imageObj_green.height * scalefactorY+20), scalefactorX, scalefactorY, imageObj_green, 19);
-        loadSpriteContent(c, currentFrames, c.width - imageObj_red.width * 0.6, (c.height - imageObj_red.height * scalefactorY+35), scalefactorX, scalefactorY, imageObj_red, 4);
+    moveActor(c,actorSkeleton,W / 2 - C(t / 6) * W,H - actorSkeleton.sprite_.img.height * actorSkeleton.sprite_.scaleY+15,(f >>2 )*2);
+    moveActor(c,actorJester,W / 2 - C(t / 32) * W,H - actorJester.sprite_.img.height * actorJester.sprite_.scaleY,(f >>2 ));
+    moveActor(c,actorJann,W - C(t / 7) * W,H - actorJann.sprite_.img.height * actorJann.sprite_.scaleY,(f >>3 ));
+    //moveActor(c,actorBoogie,W/2,H- actorBoogie.sprite_.img.height * actorBoogie.sprite_.scaleY,(f >> C(t/8)+3 )+1);
+    moveActor(c,actorTitle,W/2-actorTitle.sprite_.img.width/5 ,H/3 ,(f >> 4 ));
+    moveActor(c,actorking,W/2-actorking.sprite_.img.width *actorking.sprite_.scaleY/1.5  ,H - actorking.sprite_.img.height * actorking.sprite_.scaleY ,(f >> 4 ));
+    moveActor(c,actorbishop,W/2-actorbishop.sprite_.img.width* actorbishop.sprite_.scaleY/2  ,H - actorbishop.sprite_.img.height * actorbishop.sprite_.scaleY ,(f >> 4 ));
+    moveActor(c,actorpriest,W/2-actorpriest.sprite_.img.width * actorpriest.sprite_.scaleY/3 ,H - actorpriest.sprite_.img.height * actorpriest.sprite_.scaleY ,(f >> 4 ));
+    moveActor(c,actorqueen,W/2-actorqueen.sprite_.img.width*actorqueen.sprite_.scaleX/5  ,H - actorqueen.sprite_.img.height * actorqueen.sprite_.scaleY ,(f >> 4 ));
     
-
-    }
-    var imageObj_bunny = document.getElementById('bunny');
-    loadSpriteContent(c, f>>2,3*f%W- imageObj_bunny.width , c.height - imageObj_bunny.height * scalefactorY , 4,4, imageObj_bunny, 3);
-
-    var imageObj_jester = document.getElementById('jester');
-    loadSpriteContent(c, f>>2,((f%W))- imageObj_jester.width , c.height - imageObj_jester.height * scalefactorY , 4,4, imageObj_jester, 5);
-    var imageObj_wizard = document.getElementById('wizard');
-    loadSpriteContent(c, f>>2,((f%W))+ imageObj_wizard.width , c.height - imageObj_wizard.height * scalefactorY , 4,4, imageObj_wizard, 3);
-  
-    for(x.font='32px l',i=0;i<59;i++){
-        x.fillStyle=R(255*(i%2),255,255)
-        x.fillText(String.fromCharCode(((f)*i)%8500),C(o=20*i+t)*i*13+950,S(o+=i/6)*i*19+450)
-       }
-
-
-       for(j=0;j<51;j++)
-       for(i=0;i<51;i++){
-       x.fillStyle=R(0,255,255)
-       if((i^j+f)%15){
-       x.fillRect(i*5,j*5,5,5)}
-       } 
-       
-          
-       
+    moveActor(c,actorskull,W / 4 - C(t / 3) * W,H/2 - actorskull.sprite_.img.height * actorskull.sprite_.scaleY*newLocal,(f >>4 )*2);
+    moveActor(c,actoralien,W/3 - C(t / 8) * W,H - actoralien.sprite_.img.height * actoralien.sprite_.scaleY,(f >>3 ));
+    moveActor(c,actorufo,W / 4 - C(t / 4.5) * W,H/4 - actorufo.sprite_.img.height * actorufo.sprite_.scaleY*newLocal,(f >>4 )*2);
+   
 }
+
+function moveActor(c,actor,newx,newy,frame){
+    actor.oldX = actor.x;
+    actor.flipNextX_ = actor.oldX > newx;
+    actor.x = newx;
+    actor.y = newy;
+    drawSpriteActor(c,frame , actor);
+}
+
 
