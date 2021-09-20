@@ -12,11 +12,13 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/card.js"></script>
     <script src="js/gengine.js"></script>
+    <script src="js/rpgui.js"></script>
     <script src="https://cdn.rawgit.com/atesgoral/dweet-runtime/1.0.0/lib/index.js"></script>
 </head>
 
@@ -52,32 +54,105 @@
         <img id="jhon" src="/img/page/alien-jhon.png" hidden></img>
         <img id="hongo3" src="/img/page/forest-mushroom-talk-purple.png" hidden></img>
         <img id="robot" src="/img/page/RoboTrasherIntroScreen-sheet.png" hidden></img>
-        
        
+
+    </div>
+    <div id="bandcamp" class="hcontainer">
+        <iframe style=" border:0;width: 96%; height: 120px;margin-left: 2%; margin-right: 2%;"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3980108258/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/transparent=true/"
+            seamless><a href="https://lienalien.bandcamp.com/album/retrovibes">RetroVibes by LienAlien</a></iframe>
     </div>
 
-    <div>
-        <h1>Pixel Art </h1>
+    <div class="topnav">
+        <a id="btn_home" class="active nes-btn" href="#home" onclick="showDivs(1,'btn_home')">Home</a>
+        <a id="btn_pixelart" class="nes-btn" href="#news" onclick="showDivs(2,'btn_pixelart')">Pixel Art</a>
+        <a id="btn_music" class="nes-btn" href="#contact" onclick="showDivs(3,'btn_music')">Music</a>
+        <a id="btn_about" class="nes-btn" href="#about" onclick="showDivs(4,'btn_about')">About</a>
     </div>
-    <div class="site__wrapper">
+
+    </div>
+    <!-- Nav page content -->
+    <div id="page_home" class="nes-container is-dark  hcontainer">
+        <img id="logoRetro" class="customImg" src="/img/page/homeimage.png" ></img>
+
+    </div>
+    <div id="page_pixel" class="site__wrapper ">
 
         <div id='grid1' class="grid">
-
         </div>
 
         <div id='grid2' class="grid">
-
         </div>
 
         <div id='grid3' class="grid">
-
         </div>
 
         <div class="site__info">
 
-            <p>Handcrafted by <a target="_blank" href="https://lienthealien.itch.io/">LienTheAlien</a>. Tweet me on <a
-                    target="_blank" href="https://twitter.com/LienTheAlien">Twitter</a></p>
+
         </div>
+    </div>
+    <!-- music page-->
+    <div id="page_music" class="nes-container is-dark hcontainer">
+        <div id="iframe-container">
+            <p class="pagetext">
+                Bandcamp.</p>
+            <iframe class="video-container"
+                src="https://bandcamp.com/EmbeddedPlayer/album=3980108258/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/"
+                seamless><a href="https://lienalien.bandcamp.com/album/retrovibes">RetroVibes by
+                    LienAlien</a></iframe>
+
+            <p class="pagetext">
+                YouTube Channel. </p>
+            <iframe class="video-container" src="https://www.youtube.com/embed/XUEm3f2TMPw" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <p class="pagetext">SoundCloud.</p>
+            
+            <iframe class="video-container" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/776663092&color=%235b4650&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div>
+                <a href="https://soundcloud.com/automaton-9" title="Automaton" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Automaton</a> · <a
+                    href="https://soundcloud.com/automaton-9/doggron-quest" title="Doggron quest" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Doggron quest</a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- about page-->
+    <div id="page_about" class="nes-container is-dark with-title hcontainer  ">
+        <div>
+            <img id="jhon2" style="float:left;" src="/img/page/maniacjhon.png">
+            <p class="pagetext "> Hi there, Thanks for stopping by;
+                <a target="_blank" href="https://www.facebook.com/LIENPIXELS">
+                    <i class="nes-icon facebook is-medium"></i> LienTheAlien</a>
+                handcrafted this site.
+            </p>
+            <p class="pagetext">It was inspired by retro game graphics, good old synth music, and game development.
+            </p>
+            <p class="pagetext">Follow me on Twitter for retro-related stuff I find there. <a target="_blank"
+                    href="https://twitter.com/LienTheAlien"></a> <!-- twitter -->
+                <i class="nes-icon twitter is-medium"></i>
+            </p>
+            <P class="pagetext">
+                In case i'm in any game jam my prototypes always end up on itch.io
+                <a target="_blank" href="https://lienthealien.itch.io/"> <img id="jhon2"
+                        style="width: 2.5%;height: 2.5%;" src="/img/page/itchioicon.png"><img></a>
+            </P>
+
+            </img>
+
+            <!-- Balloon 'is-dark'  -->
+
+        </div>
+
+
     </div>
 
 

@@ -3,7 +3,9 @@
     "scripts": {
         "start": "node node_modules/live-server/live-server.js"
     },
-    "dependencies": {},
+    "dependencies": {
+        "nes.css": "^2.3.0"
+    },
     "devDependencies": {
         "gulp": "^4.0.2",
         "live-server": "^1.2.1"

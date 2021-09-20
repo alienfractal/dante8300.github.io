@@ -8,7 +8,7 @@
     // generate the html for card
     var html = '<div class="card shadow-outside">';
     html += ' <div class="card__image">';
-    html += ' <img src="'+picturePath+'" alt="">';
+    html += ' <img class="customImg" src="'+picturePath+'" alt="">';
     html += ' <div class="card__overlay card__overlay--pixelgradient ">';
     html += ' <div class="card__overlay-content">';
     html += '   <ul class="card__meta">';
