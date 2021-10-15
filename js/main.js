@@ -33,20 +33,46 @@ var actoralien;
 var actoralienjhon;
 var actorRobot;
 
-var home ;
-var pixelArt ;
-var music ;
-var about ;
+var home;
+var pixelArt;
+var music;
+var about;
+var games;
+var videos;
 var slideIndex = 1;
 
 
 var actors = [];
 
+function showDivs(n, navid) {
+    var i;
 
-function requestGalleryList() {
+    var pages = [home, pixelArt, music,games,videos,about];
+
+
+    console.log(n);
+    if (n > pages.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = pages.length };
+    for (i = 0; i < pages.length; i++) {
+        //console.log(pages[i]);
+        pages[i].style.display = "none";
+    }
+
+    pages[n - 1].style.display = "block";
+    slideIndex = n;
+    var list = document.getElementsByTagName("a")
+    for (let index = 0; index < list.length; index++) {
+        list[index].classList.remove("active");
+    }
+    document.getElementById(navid).classList.add("active");
+
+}
+
+async function requestGalleryList() {
     var xmlhttp = new XMLHttpRequest(),
         method = 'GET',
         url = '../db/pictureGallery.json';
+
 
     xmlhttp.onreadystatechange = function () {
         try {
@@ -55,16 +81,23 @@ function requestGalleryList() {
                 //myFunction(myArr);
 
 
-                console.log("Gallery loaded ")
+
+                populateGrid(myArr).then(
+                    function (value) { /* code if successful */
+                        console.log("Gallery loaded = " + value)
+                    },
+                    function (error) { /* code if some error */
+                    console.log("error= "+error);}
+                );
                 populateGrid(myArr);
-                assetsLoaded = true;
+                
             }
         } catch (e) {
             console.log(e);
         }
 
     };
-  
+
     xmlhttp.open(method, url, true);
     xmlhttp.send();
 
@@ -92,9 +125,12 @@ function requestGalleryList() {
     pixelArt = document.getElementById('page_pixel');
     music = document.getElementById('page_music');
     about = document.getElementById('page_about');
-    slideIndex=1;
-    showDivs(slideIndex,'btn_home');
-    
+    games = document.getElementById('page_games');
+    videos = document.getElementById('page_vids');
+
+    slideIndex = 1;
+    assetsLoaded = true;
+    showDivs(slideIndex, 'btn_home');
 }
 
 
@@ -153,32 +189,10 @@ function moveActor(c, actor, newx, newy, frame) {
 /*Page navigation*/
 // Slideshow
 
-function currentPage(pageIndex){
+function currentPage(pageIndex) {
 
 }
 
-function showDivs(n,navid) {
-    var i;
 
-    var pages = [home, pixelArt, music, about];
-    
-
-    console.log(n);
-    if (n > pages.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = pages.length };
-    for (i = 0; i < pages.length; i++) {
-        //console.log(pages[i]);
-        pages[i].style.display = "none";
-    }
-
-    pages[n - 1].style.display = "block";
-    slideIndex =n;
-    var list = document.getElementsByTagName("a")
-    for (let index = 0; index < list.length; index++) {
-        list[index].classList.remove("active");
-    }
-    document.getElementById(navid).classList.add("active");
-    
-}
 
 

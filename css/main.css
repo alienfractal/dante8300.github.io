@@ -45,12 +45,22 @@ body {
     background-repeat: repeat;
 }
 
+
 .pagetext {
-    font-size: 25px;
+    font-size: 1.6vw;
     text-align: left;
     font-family: "manaspc";
     color: #ffffff;
 }
+
+@media only screen and (max-width: 600px) {
+    .pagetext {
+        font-size: 3vw;
+        text-align: left;
+        font-family: "manaspc";
+        color: #ffffff;
+    }
+  }
 
 .video-container {
     width: 15vw;
@@ -121,6 +131,15 @@ p {
     border-image: url("../img/page/border.png") 30 round;
 }
 
+.arcadec #c{
+    width: 28vw;
+    height: 28vw;
+    background-color: rgba(0, 0, 0, 1);
+    margin-left: 36%;
+  
+    
+}
+
 #cbackground {
     width: 95%;
     height: 28vw;
@@ -163,9 +182,11 @@ p {
     position: relative;
 }
 
-a:hover {
-    text-decoration: ;
+a:hover,a:active {
+    text-decoration: salmon ;
 }
+
+
 
 .parent {
     display: flex;
@@ -188,6 +209,10 @@ a:hover {
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 2%;
+}
+
+.pagesection{
+    display: none;
 }
 
 /* Navbar*/
